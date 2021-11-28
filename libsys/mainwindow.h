@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+#include "csvsystem.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -14,6 +16,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    QVector<Book> bookVec;
 
 private:
     Ui::MainWindow *ui;
