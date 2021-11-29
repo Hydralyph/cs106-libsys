@@ -5,13 +5,8 @@
 #include <QStringList>
 #include <QFile>
 #include <QTextStream>
+#include <QVector>
 
-class CSVSystem
-{
-public:
-    CSVSystem();
-    void ReadFromCSV();
-};
 
 class Book
 {
@@ -30,7 +25,7 @@ private:
     QStringList typeList = {"Fiction", "Non-Fiction", "N/A"};
 
 public:
-    Book(QString is="", QString ti="",  QString au="", QString g1 = "", QString g2="", QString ty="", QString d="", bool h = false)
+    Book(QString is="", QString ti="",  QString au="", QString g1 = "", QString g2="", QString ty="", QString d="", bool h = true)
     {
         isbn = is;
         title = ti;
@@ -43,8 +38,22 @@ public:
 
     }
 
-    Book SetBookData(QString, QString, QString, QString, QString, QString, QString, bool);
+    Book SetBookData(QString, QString, QString, QString, QString, QString, QString);
+    QString GetBookDataAsCSV(Book);
+    QString GetBookDataAsText(Book);
 
 };
+
+
+
+class CSVSystem
+{
+public:
+    CSVSystem();
+    void ReadFromCSV();
+    void WriteToCSV(QVector<Book>);
+};
+
+
 
 #endif // CSVSYSTEM_H
