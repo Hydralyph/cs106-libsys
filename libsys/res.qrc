@@ -1,6 +1,8 @@
 <RCC>
-    <qresource prefix="/res"/>
-    <qresource prefix="/">
-        <file>res/libsys-bookdata.csv</file>
+    <qresource prefix="/res">
+        <file>res/libsys-cataloguedata.csv</file>
+        <file>res/libsys-usercheckedoutdata.csv</file>
+        <file>res/libsys-userdata.csv</file>
+        <file>res/libsys-userreserveddata.csv</file>
     </qresource>
 </RCC>
