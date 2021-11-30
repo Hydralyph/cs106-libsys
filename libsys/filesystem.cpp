@@ -94,9 +94,12 @@ void FS::AddUser(QString user_ID, QString user_FirstName, QString user_LastName,
     userFile.close();
 }
 
-void FS::ModifyUser(QStringList userData)
+void FS::ModifyUser(QStringList userData, QString userID)
 {
-
+    if(userData.contains(userID))
+    {
+        userData
+    }
 }
 
 void FS::DeleteUser(QString user_ID)
