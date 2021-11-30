@@ -26,7 +26,7 @@ public:
 
     // ====== USER FS FUNCTIONS =======
     static void AddUser(QString, QString, QString, QString, QString, QString, QString, QString);     // NOT IMPLEMENTED, NOT TESTED
-    static void ModifyUser(QStringList);                                                    // NOT IMPLEMENTED, NOT TESTED
+    static void ModifyUser(QStringList, QString);                                                    // NOT IMPLEMENTED, NOT TESTED
     static void DeleteUser(QString);                                                        // NOT IMPLEMENTED, NOT TESTED
     // ================================
 
