@@ -99,28 +99,7 @@ void FS::ModifyUser(QStringList userData, QString userID)
 {
     if(userData.contains(userID))
     {
-        for(int i = 0; i < userData.length(); i += 8)
-        {
-            if(userData[i] == userID)
-            {
-                // Add modification fields EXAMPLE
-                /* userData[i + 1] = ui->FirstName
-                 * userData[i + 2] = ui->LastName
-                 * etc etc.
-                 */
-            }
-        }
 
-        if(userFile.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text))
-        {
-            QTextStream out(&userFile);
-            // NOTE: ADD OUTPUT OF USERDATA
-
-        }
-    }
-    else
-    {
-        QMessageBox::information(NULL, "FS ERROR: UserID not found in User File. Try again later.", QString("User ID not found: " + userID));
     }
 }
 
