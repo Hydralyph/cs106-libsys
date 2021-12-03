@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "dialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -25,9 +26,12 @@ for (int i = 0; i < 10; i++) {
     QLabel *Title = new QLabel();
     QLabel *Author = new QLabel();
     QLabel *Desc = new QLabel();
-    Image->setText("lol");
-    Title->setText("lol");
-    Author->setText("lol");
+
+    QStringList bookData = FS::loadCatalogueData();
+
+    Image->setText(bookData[7]);
+    Title->setText(bookData[1]);
+    Author->setText(bookData[2]);
     Desc->setText("lol");
 
     Template->addWidget(Image,0,0);
