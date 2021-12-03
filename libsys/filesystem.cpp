@@ -84,6 +84,7 @@ void FS::AddUser(QString user_ID, QString user_FirstName, QString user_LastName,
     if(userFile.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text))
     {
         QTextStream out(&userFile);
+        // NOTE: NEED TO RANDOMISE USERID
         out << user_ID << ",," << user_FirstName << ",," << user_LastName << ",," << user_Password << ",," << user_Email << ",," << user_PhoneNum << ",," << user_ProfImg << user_AdminFlag << "\n";
     }
     else
@@ -98,13 +99,30 @@ void FS::ModifyUser(QStringList userData, QString userID)
 {
     if(userData.contains(userID))
     {
-        //userData
+
     }
 }
 
-void FS::DeleteUser(QString user_ID)
+void FS::DeleteUser(QStringList userData, QString userID)
 {
-
+    if(userData.contains(userID))
+    {
+        for(int i = 0; i < userData.length(); i += 8)
+        {
+            if(userData[i] == userID)
+            {
+                // Add Deletion fields EXAMPLE
+                /* userData[i].remove(0, userData[i].length());
+                 * userData[i + 1].remove(0, userData[i + 1].length());
+                 * etc etc.
+                 */
+            }
+        }
+    }
+    else
+    {
+        QMessageBox::information(NULL, "FS ERROR: UserID not found in User File. Try again later.", QString("User ID not found: " + userID));
+    }
 }
 // ==================================
 
