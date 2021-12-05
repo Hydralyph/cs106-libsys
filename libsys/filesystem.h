@@ -1,44 +1,44 @@
-//#ifndef FILESYSTEM_H
-//#define FILESYSTEM_H
+#ifndef FILESYSTEM_H
+#define FILESYSTEM_H
 
-//#include <QStringList>
-//#include <QFile>
-//#include <QTextStream>
-//#include <QMessageBox>
+#include <QStringList>
+#include <QFile>
+#include <QTextStream>
+#include <QMessageBox>
 
-//typedef class Filesystem
-//{
-//public:
-//    // File Locations
-//    static QFile catalogueFile;
-//    static QFile userFile;
-//    static QFile userCheckedOutFile;
-//    static QFile userReservedFile;
+typedef class Filesystem
+{
+public:
+    // File Locations
+    static QFile catalogueFile;
+    static QFile userFile;
+    static QFile userCheckedOutFile;
+    static QFile userReservedFile;
 
 
-//    Filesystem();
+    Filesystem();
 
-//    // ===== GENERAL FS FUNCTIONS =====
-//    static QStringList loadCatalogueData();                                                         // IMPLEMENTED, NOT TESTED
-//    static QStringList loadUserData();                                                              // IMPLEMENTED, NOT TESTED
-//    static QStringList loadUserCheckedOutData();                                                    // IMPLEMENTED, NOT TESTED
-//    static QStringList loadUserReservedData();                                                      // IMPLEMENTED, NOT TESTED
-//    // ================================
+    // ===== GENERAL FS FUNCTIONS =====
+    static QStringList loadCatalogueData();                                                         // IMPLEMENTED, NOT TESTED
+    static QStringList loadUserData();                                                              // IMPLEMENTED, NOT TESTED
+    static QStringList loadUserCheckedOutData();                                                    // IMPLEMENTED, NOT TESTED
+    static QStringList loadUserReservedData();                                                      // IMPLEMENTED, NOT TESTED
+    // ================================
 
-//    // ====== USER FS FUNCTIONS =======
-//    static void AddUser(QString, QString, QString, QString, QString, QString, QString, QString);     // IMPLEMENTED, NOT TESTED
-//    static void ModifyUser(QStringList, QString);                                                    // IMPLEMENTED, NOT TESTED
-//    static void DeleteUser(QStringList, QString);                                                    // IMPLEMENTED, NOT TESTED
-//    // ================================
+    // ====== USER FS FUNCTIONS =======
+    static void AddUser(QString, QString, QString, QString, QString, QString, QString, QString);     // IMPLEMENTED, NOT TESTED
+    static void ModifyUser(QStringList, QString);                                                    // IMPLEMENTED, NOT TESTED
+    static void DeleteUser(QStringList, QString);                                                    // IMPLEMENTED, NOT TESTED
+    // ================================
 
-//    // ====== BOOK FS FUNCTIONS =======
-//    static void CheckoutBook(QString, QString, QString, QString, QString, QString);                  // IMPLEMENTED, NOT TESTED
-//    static void ReserveBook(QString, QString, QString, QString, QString, QString, QString);          // IMPLEMENTED, NOT TESTED
-//    static void AddBook(QString, QString, QString, QString, QString, QString, QString);              // IMPLEMENTED, NOT TESTED
-//    static void ModifyBook(QStringList, QString);                                                    // IMPLEMENTED, NOT TESTED
-//    static void DeleteBook(QStringList, QString);                                                    // IMPLEMENTED, NOT TESTED
-//    // ================================
+    // ====== BOOK FS FUNCTIONS =======
+    static void CheckoutBook(QString, QString, QString, QString, QString, QString);                  // IMPLEMENTED, NOT TESTED
+    static void ReserveBook(QString, QString, QString, QString, QString, QString, QString);          // IMPLEMENTED, NOT TESTED
+    static void AddBook(QString, QString, QString, QString, QString, QString, QString);              // IMPLEMENTED, NOT TESTED
+    static void ModifyBook(QStringList, QString);                                                    // IMPLEMENTED, NOT TESTED
+    static void DeleteBook(QStringList, QString);                                                    // IMPLEMENTED, NOT TESTED
+    // ================================
 
-//}FS;
+}FS;
 
-//#endif // FILESYSTEM_H
+#endif // FILESYSTEM_H
